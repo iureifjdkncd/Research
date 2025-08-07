@@ -18,13 +18,13 @@
 #### ✅ 주요 성과  
 - 제안 모델은 기존 통합 품목형 학습 기반 이상탐지 모델 대비,  
   놓쳤던 불량까지 포착하여 **불량탐지 정확도 약 30 ~ 50% 향상**   
-- **제조 데이터 라벨링 부족 환경에서의 실질적 활용 가능성** 검증
+- **라벨링 문제점이 발생할 수 있는 제조 데이터 환경에서의 실질적 활용 가능성** 검증
 
 ---
 
 #### 💡 연구 의의  
 - **생산 Setting 조건 변화에 강건하고 재학습 부담이 낮은** 구조 제안  
-- **지속가능한 스마트팩토리 구축**에 기여할 수 있는 기반 기술 제시
+- **지속가능한 스마트팩토리 예지보전 시스템 구축**에 기여할 수 있는 기술 제시
 
 ---
 
@@ -32,3 +32,9 @@
 **Lee, J., Jang, J., Tang, Q., & Jung, H.** (2025)  
 *Recipe Based Anomaly Detection with Adaptable Learning: Implications on Sustainable Smart Manufacturing*  
 🔗 [논문 바로가기 (MDPI Sensors)](https://doi.org/10.3390/s25051457)
+
+---
+
+#### 📝 프로젝트 연계  
+- [비지도 학습 기반 사출 품질 예측 및 최적 세팅 추천 시스템](https://github.com/iureifjdkncd/B2B_AI_Projects/tree/main/Project_A) 에 아이디어 적용 
+
