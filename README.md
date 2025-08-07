@@ -38,3 +38,12 @@
 #### 📝 프로젝트 연계  
 - [비지도 학습 기반 사출 품질 예측 및 최적 세팅 추천 시스템](https://github.com/iureifjdkncd/B2B_AI_Projects/tree/main/Project_A) 에 아이디어 적용 
 
+
+--- 
+### 2.) A Two-Stage Deep Learning Framework for Uncertainty-Aware Forecasting and Conditional Process Optimization Toward Sustainable Smart Manufacturing
+
+#### 1.) 아이디어 : 다변량 시계열의 추세/변동성 재현 강화한 Reconstruction Model 구축 & 시계열 예측모델 성능 보조로 신뢰성 향상 
+
+#### 2.) Conditional VAE 특성을 살려서 주어진 품질에 기반한 다변량 시계열 공정조건 생성 실험 진행 
+
+#### Working ~ 
