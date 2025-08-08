@@ -35,13 +35,11 @@ $$
 ### 🔹 Condition Vector 추가용 Scalar 변환
 모든 Feature에 대한 평균값을 구해 스칼라 형태로 축약:
 
-$$
-\bar{\mu}_t = \frac{1}{F} \sum_{j=1}^F [\mu_t]_j
-$$
+<p align="center">
+  <img width="200" height="50" alt="화면 캡처 2025-08-08 103606"
+       src="https://github.com/user-attachments/assets/8563cd1f-cb18-4a97-9783-9e5514c24b14" />
+</p>
 
-$$
-\bar{\sigma}_t = \frac{1}{F} \sum_{j=1}^F [\sigma_t]_j
-$$
 
 ---
 
@@ -78,9 +76,9 @@ $$
 ---
 
 #### **Gaussian Noise 추가 (강건성 확보)**
-$$
-\tilde{c}_t \leftarrow \tilde{c}_t + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma_{\text{noise}}^2 I)
-$$
+<p align="center">
+<img width="200" height="45" alt="화면 캡처 2025-08-08 103912" src="https://github.com/user-attachments/assets/9156c24b-4f07-49eb-8d18-a26f219999c3" />
+</p>
 
 ---
 
@@ -112,9 +110,9 @@ $$
 ### 2.3 Decoder (조건부 LSTM 디코더)
 
 #### **잠재벡터 투영**
-$$
-h_z = \phi(W_z z + b_z)
-$$
+<p align="center">
+<img width="100" height="70" alt="화면 캡처 2025-08-08 104058" src="https://github.com/user-attachments/assets/011f09ea-79a5-4c99-9844-b90874ad7dca" />
+</p>
 (시퀀스 길이 $T$만큼 반복)
 
 ---
@@ -134,16 +132,16 @@ $$
 ---
 
 #### **출력 변환**
-$$
-\hat{x}_t = W_{\mathrm{out}} h_{\mathrm{dec},t} + b_{\mathrm{out}}
-$$
+<p align="center">
+<img width="210" height="30" alt="화면 캡처 2025-08-08 104315" src="https://github.com/user-attachments/assets/d6937408-85fd-477a-b807-4810d397667c" />
+</p>
 
 ---
 
 #### **Post-hoc Gaussian Noise 추가**
-$$
-\hat{x}_{1:T} \leftarrow \hat{x}_{1:T} + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma_{\text{noise}}^2 I)
-$$
+<p align="center">
+<img width="210" height="30" alt="화면 캡처 2025-08-08 104436" src="https://github.com/user-attachments/assets/96a9e602-1b72-42ee-b8b0-e0764b997078" />
+</p>
 
 ---
 
