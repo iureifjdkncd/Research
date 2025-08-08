@@ -40,10 +40,72 @@
 
 
 --- 
-### 2.) A Two-Stage Deep Learning Framework for Uncertainty-Aware Forecasting and Conditional Process Optimization Toward Sustainable Smart Manufacturing
+### A Two-Stage Deep Learning Framework for Uncertainty-Aware Forecasting and Conditional Process Optimization Toward Sustainable Smart Manufacturing (2025)
 
-#### 1.) 아이디어 : 다변량 시계열의 추세/변동성 재현 강화한 Reconstruction Model 구축 & 시계열 예측모델 성능 보조로 신뢰성 향상 
+#### 📌 연구 목적
+스마트 제조 환경에서 **예측 정확도**와 **불확실성 정량화**를 동시에 달성하고, 목표 품질 조건에 맞춰 **현실성 있는 공정 입력 시퀀스**를 생성·최적화할 수 있는 **2단계 딥러닝 프레임워크**를 제안.
 
-#### 2.) Conditional VAE 특성을 살려서 주어진 품질에 기반한 다변량 시계열 공정조건 생성 실험 진행 
+- 제조 공정의 **변동성**, **데이터 노이즈**, **조건 변화**에 강건하게 대응  
+- **실시간 시뮬레이션**과 **적응형 공정 제어**를 통한 **자원 효율성** 및 **지속가능성** 확보  
 
-#### Working ~ 
+---
+
+#### 🧠 핵심 방법
+
+#### 1. **2단계 구조**
+
+##### (1) 불확실성 기반 예측 모듈
+- **DeepAR** 및 **Monte Carlo Dropout** 기반 시계열 예측
+- **점추정** + **예측 구간(신뢰구간)** 제공
+- 성능 평가:  
+  - **Balanced-MAE** → 정확도 + 변동성 반영  
+  - **Unified Uncertainty Score** → Prediction Interval의 Coverage + Sharpness 종합 반영  
+
+##### (2) 조건부 생성 모듈 (LSTM-CVAE)
+- 목표 품질값(Condition Vector)에 대응하는 다변량 시계열 입력 시퀀스 생성
+- **Augmented Condition Vector**: 최근 입력 통계(평균, 표준편차)를 Condition Vector에 포함해 **추세·변동성** 반영
+- **KL Annealing + Target-Aware Penalty**: Peak Value 및 이상 근사 Target에 대한 시퀀스 학습 강화
+- Encoder·Decoder 단계모두 **Posthoc Gaussian Noise** 삽입 → Reconstruction 일반화 및 성능 향상
+
+---
+
+#### 2. **2단계 필터링 (Two-Stage Filtering)**
+
+1. **재구성 오류 기반 1차 필터링**  
+   - 훈련 데이터에서 관찰된 **최대 MAE** 초과 시퀀스 제거
+2. **목표 근접도 기반 2차 선택**  
+   - 남은 후보 중 **시계열 예측값이 타겟과 가장 가까운 시퀀스** 최종 선택 (**불확실성 기반 예측 모듈 기반**)
+
+---
+
+#### 3. **강건성 확보 메커니즘**
+- **Batch-wise Temporal Shuffling)** 환경에서도 안정적 성능 유지
+- **국소 시계열 패턴(Local Temporal Pattern)** 중심 학습 → 생산 스케줄 변화에도 대응 가능
+
+---
+
+#### ✅ 주요 성과
+- 실제 현장 제조 데이터+ 공개 벤치마크 데이터에서 **Forecast-Aware Reconstruction** 시스템 적용 시
+  - **Balanced-MAE 최대 35.7% 개선**  
+  - **불확실성 점수 최대 25.2% 개선**
+- 재구성된 입력 시퀀스 기반 Target품질 예측 성능 ≈ 실제 테스트 데이터 예측 성능 → **목표 기반 조건 생성 신뢰성 검증**
+- 극단적인 타겟(최소/최대값) 조건에서도 **현실성 있는 시퀀스 생성 성공**
+- **시뮬레이션·예측·최적화**가 통합된 제조 공정 제어 가능성 제시
+
+---
+
+#### 💡 연구 의의
+- **Forecast-Aware Reconstruction Framework**  
+  → 단순 예측 정확도뿐 아니라 **목표 일관성**과 **현실적 공정 경로** 제공
+- **적응형 시뮬레이션** 기반 실시간 공정 제어·자원 최적화  
+  → 에너지 절감, 폐기물 최소화 기여
+- 제조 환경의 **변동성·불확실성·조건 변화**에 강건한 **지능형 의사결정 지원**
+- 다양한 산업 도메인으로 확장 가능 → **지속가능한 스마트팩토리** 구현 기여
+
+---
+
+#### 📄 논문 정보  
+
+- submit 완료 & publish 준비중
+
+
