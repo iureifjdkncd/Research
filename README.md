@@ -52,7 +52,7 @@
 
 #### 🧠 핵심 방법
 
-#### 1. **2단계 구조**
+#### 1. **Forecast-Aware Reconstruction 2단계 구조**
 
 ##### (1) 불확실성 기반 예측 모듈
 - **DeepAR** 및 **Monte Carlo Dropout** 기반 시계열 예측
@@ -69,7 +69,7 @@
 
 ---
 
-#### 2. **2단계 필터링 (Two-Stage Filtering)**
+#### 2. **Target-Aware Sequence Generation 2단계 필터링 (Two-Stage Filtering)**
 
 1. **재구성 오류 기반 1차 필터링**  
    - 훈련 데이터에서 관찰된 **최대 MAE** 초과 시퀀스 제거
