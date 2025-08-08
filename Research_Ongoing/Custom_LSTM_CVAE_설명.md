@@ -109,7 +109,7 @@ $$
 
 ### 2.3 Decoder (조건부 LSTM 디코더)
 
-#### **잠재벡터 투영**
+#### **Latent Vector 투영**
 <p align="center">
 <img width="100" height="70" alt="화면 캡처 2025-08-08 104058" src="https://github.com/user-attachments/assets/011f09ea-79a5-4c99-9844-b90874ad7dca" />
 </p>
@@ -117,7 +117,7 @@ $$
 
 ---
 
-#### **조건 결합**
+#### **Condition 결합**
 $$
 h_t^{(0)} = [h_{z,t}; \tilde{c}_t], \quad t = 1, \dots, T
 $$
