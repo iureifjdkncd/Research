@@ -106,7 +106,7 @@
 
 #### 📄 논문 정보  
 
-- submit / preprints 저장 완료 & publish 준비중
+- 🔗 [submit / preprints 저장 완료 & publish 준비중](https://www.preprints.org/manuscript/202508.0377/v1)
 
 ---
 
